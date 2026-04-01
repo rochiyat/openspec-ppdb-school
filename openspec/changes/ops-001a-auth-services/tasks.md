@@ -1,48 +1,48 @@
 ## 1. Database & Persistence Setup
 
-- [ ] 1.1 Create migration 003_auth_services_init.sql with auth tables (already in OPS-001, verify)
-- [ ] 1.2 Create indexes for auth tables (token lookups, user searches)
-- [ ] 1.3 Create audit_logs table for auth event tracking
-- [ ] 1.4 Create session_tokens table for distributed session management
-- [ ] 1.5 Run migrations and verify schema in dev environment
+- [x] 1.1 Create migration 003_auth_services_init.sql with auth tables (already in OPS-001, verify)
+- [x] 1.2 Create indexes for auth tables (token lookups, user searches)
+- [x] 1.3 Create audit_logs table for auth event tracking
+- [x] 1.4 Create session_tokens table for distributed session management
+- [x] 1.5 Run migrations and verify schema in dev environment
 
 ## 2. Backend Service Layer - Authentication Service
 
-- [ ] 2.1 Create AuthenticationService class with registration logic
-- [ ] 2.2 Implement email/phone validation and duplicate checking
-- [ ] 2.3 Implement password hashing with PasswordService (bcrypt cost 12)
-- [ ] 2.4 Implement login flow (credential validation, token generation)
-- [ ] 2.5 Implement password reset request (generate token, send email/SMS)
-- [ ] 2.6 Implement password reset confirmation (token validation, password update)
-- [ ] 2.7 Implement token refresh logic (validate refresh token, issue new access token)
-- [ ] 2.8 Implement logout flow (revoke refresh token)
-- [ ] 2.9 Implement verification code generation and validation
-- [ ] 2.10 Add authentication event logging for audit trail
-- [ ] 2.11 Write unit tests for AuthenticationService (8+ test cases)
+- [x] 2.1 Create AuthenticationService class with registration logic
+- [x] 2.2 Implement email/phone validation and duplicate checking
+- [x] 2.3 Implement password hashing with PasswordService (bcrypt cost 12)
+- [x] 2.4 Implement login flow (credential validation, token generation)
+- [x] 2.5 Implement password reset request (generate token, send email/SMS)
+- [x] 2.6 Implement password reset confirmation (token validation, password update)
+- [x] 2.7 Implement token refresh logic (validate refresh token, issue new access token)
+- [x] 2.8 Implement logout flow (revoke refresh token)
+- [x] 2.9 Implement verification code generation and validation
+- [x] 2.10 Add authentication event logging for audit trail
+- [x] 2.11 Write unit tests for AuthenticationService (8+ test cases)
 
 ## 3. Backend Service Layer - RBAC Service
 
-- [ ] 3.1 Create RBACService class for permission checking
-- [ ] 3.2 Implement effective permissions calculation (union of roles at scope)
-- [ ] 3.3 Implement hasPermission(userId, permission, scope) check
-- [ ] 3.4 Implement role assignment validation
-- [ ] 3.5 Implement scope validation (user has access to resource)
-- [ ] 3.6 Create permission seeding for all roles
-- [ ] 3.7 Add role-permission caching mechanism (Redis or in-memory with TTL)
-- [ ] 3.8 Implement role assignment audit logging
-- [ ] 3.9 Write unit tests for RBACService (10+ test cases)
+- [x] 3.1 Create RBACService class for permission checking
+- [x] 3.2 Implement effective permissions calculation (union of roles at scope)
+- [x] 3.3 Implement hasPermission(userId, permission, scope) check
+- [x] 3.4 Implement role assignment validation
+- [x] 3.5 Implement scope validation (user has access to resource)
+- [x] 3.6 Create permission seeding for all roles
+- [x] 3.7 Add role-permission caching mechanism (Redis or in-memory with TTL)
+- [x] 3.8 Implement role assignment audit logging
+- [x] 3.9 Write unit tests for RBACService (10+ test cases)
 
 ## 4. Backend Service Layer - Session Service
 
-- [ ] 4.1 Create SessionService class for scope and session management
-- [ ] 4.2 Implement auto-scope selection (single scope available)
-- [ ] 4.3 Implement manual scope selection (user chooses from available)
-- [ ] 4.4 Implement scope switching validation and token re-issuance
-- [ ] 4.5 Implement effective permissions recomputation on scope switch
-- [ ] 4.6 Implement session context injection (user_id, portal, scope, permissions)
-- [ ] 4.7 Add session token size validation (warn if > 4KB)
-- [ ] 4.8 Implement session termination (logout all devices option)
-- [ ] 4.9 Write unit tests for SessionService (8+ test cases)
+- [x] 4.1 Create SessionService class for scope and session management
+- [x] 4.2 Implement auto-scope selection (single scope available)
+- [x] 4.3 Implement manual scope selection (user chooses from available)
+- [x] 4.4 Implement scope switching validation and token re-issuance
+- [x] 4.5 Implement effective permissions recomputation on scope switch
+- [x] 4.6 Implement session context injection (user_id, portal, scope, permissions)
+- [x] 4.7 Add session token size validation (warn if > 4KB)
+- [x] 4.8 Implement session termination (logout all devices option)
+- [x] 4.9 Write unit tests for SessionService (8+ test cases)
 
 ## 5. Backend Middleware & Guards
 
