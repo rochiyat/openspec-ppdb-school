@@ -40,3 +40,4 @@ venv/
 *.bat
 
 .cursor/ 
+.agent/
